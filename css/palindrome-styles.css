@@ -1,0 +1,33 @@
+html {
+    position: relative;
+}
+
+.navbar.navbar-expand-lg {
+    background-color: saddlebrown;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+.container{
+    margin-top: 1em;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+    
+}
+
+.container.input, .result-container {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.palindrome-explanation {
+    text-align: center;
+}

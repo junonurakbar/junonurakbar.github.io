@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Portofolio</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body id="home">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Harjuno Nur Akbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="jumbotron text-center">
+      <img src="./img/20231212_061309(1).jpg" class="rounded-circle img-thumbnail mt-6"/>
+      <h1 class="display-4">Harjuno Nur Akbar</h1>
+      <p class="lead">
+        Fresh Graduate | Embedded Engineer | Junior Back-End Web Developer
+      </p>
+      <p><i class="bi bi-envelope-at-fill"></i> <a href="mailto:junonurakbar@gmail.com" target="_blank">Email</a> <i class="bi bi-linkedin"></i> <a href="https://www.linkedin.com/in/harjuno-nur-akbar-8b16541a4/" target="_blank">LinkedIn</a> <i class="bi bi-github"></i> <a href="https://github.com/junonurakbar" target="_blank"> GitHub</a></p>
+    </div>
+
+    <!-- about -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2 class="text-center">About</h2>
+            <hr />
+          </div>
+        </div>
+
+        <div class="row justify-content-center fs-5" >
+          <div class="col-md-12 about-me">
+            <p>
+              <!-- I am a fresh graduate in electrical engineering in electronics and I have experienced working in
+microcontrollers, embedded system, and IoT projects. During my college years, I developed a web server
+for my bachelor final project which was a real-time photovoltaic data logger for monitoring purposes using
+C, HTML, PHP, and MySQL. I am enthusiastic about learning and growing in my career and am looking
+for a position in IoT engineer. -->
+                Fresh graduate in electrical engineering in electronics. Highly Interested in web development, embedded systems, IoT (Internet of Things), microcontrollers, and PCB design. Eager to learn new skills and knowledges. Prioritize details and efficiency when working on a project and easy
+                to adapt with new environments and tools.
+            </p>
+          </div>
+        </div>
+      </div>
+
+        <div class="row justify-content-center fs-5" >
+          <div class="col-md-10 about-me">
+            <p><b>Programming Languages: </b>C++, JavaScript, SQL, PHP</p>
+            <p><b>Frameworks: </b> Boostrap, ExpressJS</p>
+            <p><b>Tools: </b> MySQL, PostgreSQL, Git, NodeJS</p>
+            <p><b>Code Editor: </b> Visual Studio Code, Arduino IDE</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- portofolio -->
+    <section id="projects">
+      <div class="container">
+        <div class="row text-center mb-2">
+          <div class="col">
+            <h2>My Projects</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 mb-2">
+            <div class="card">
+              <a href="./countries.html" target="_blank">
+                <img src="img/thumbnails/countries.jpg" class="card-img-top" alt="Counties" />
+              </a>
+              <div class="card-body">
+                <p class="card-text">
+                  <ul style="margin-top: 0;">
+                    <li>
+                      Countries Detail Search
+                    </li>
+                    <li><b>Programs: </b> HTML, Bootsrap, JavaScript</li>
+                    <li>
+                      image by <a href="https://unsplash.com/@lemonvlad?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Vladislav Klapin</a> on <a href="https://unsplash.com/photos/assorted-flag-YeO44yVTl20?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                    </li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-2">
+            <div class="card">
+              <a href="https://github.com/junonurakbar/PZEM016andPZEM017NodeMCU" target="_blank">
+                <img src="img/thumbnails/solar_panel.jpg" class="card-img-top" alt="Solar Panel" />
+              </a>
+              <div class="card-body">
+                <p class="card-text">
+                  <ul>
+                    <li>Solar Panel Monitor using ESP8266</li>
+                    <li><b>Programs: </b>HTML, PHP, MySQL, Arduino</li>
+                    <li>
+                      image by <a
+                      href="https://unsplash.com/@chelseadeeyo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Chelsea</a> on <a href="https://unsplash.com/photos/blue-solar-panel-WvusC5M-TM8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+                    </li>
+                  </ul>  
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-2">
+            <div class="card">
+              <a href="./palindromeChecker.html" target="_blank"><img src="img/thumbnails/words.jpg" class="card-img-top" alt="Words" /></a>
+              <div class="card-body">
+                <p class="card-text">
+                  <ul>
+                    <li>Palindrome Checker</li>
+                    <li><b>Programs: </b>HTML, JavaScript</li>
+                    <li>image by <a href="https://unsplash.com/@seffen99?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sven Brandsma</a> on <a href="https://unsplash.com/photos/brown-wooden-blocks-with-numbers-C5SUkYZT7nU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row text-center mb-2">
+        <div class="col">
+          <h2>Other Projects</h2>
+        </div>
+      </div>
+
+      <div class="container other-projects">
+        <!-- <div class="item">
+          <h4>Timestamp Microservice</h4>
+          <p class="programs"><b>Programs: </b>NodeJS, ExpressJS</p>
+          <p class="link"><a href="https://replit.com/@junonurakbar/boilerplate-project-timestamp"></a></p>
+        </div> -->
+        <table class="table-hover">
+          <thead>
+            <th style="width: 92%"></th>
+          </thead>
+          <tbody>
+            <tr class="tr-project">
+              <td><h5>Timestamp Microservice</h5></td>
+              <td><h5><a href="https://replit.com/@junonurakbar/boilerplate-project-timestamp" target="_blank">View <i class="bi bi-arrow-up-right-square-fill"></i></a></h5></td>
+            </tr>
+            <tr class="tr-extend"><td><b>Programs: </b> NodeJS, ExpressJS</td><td></td></tr>
+
+            <tr class="tr-project">
+              <td><h5>Request Header Parser Microservice</h5></td>
+              <td><h5><a href="https://replit.com/@junonurakbar/boilerplate-project-headerparser" target="_blank">View <i class="bi bi-arrow-up-right-square-fill"></i></a></h5></td>
+            </tr>
+            <tr class="tr-extend"><td><b>Programs: </b> NodeJS, ExpressJS</td><td></td></tr>
+
+            <tr class="tr-project">
+              <td><h5>URL Shortener Microservice</h5></td>
+              <td><h5><a href="https://replit.com/@junonurakbar/boilerplate-project-urlshortener" target="_blank">View <i class="bi bi-arrow-up-right-square-fill"></i></a></h5></td>
+            </tr>
+            <tr class="tr-extend"><td><b>Programs: </b> NodeJS, ExpressJS, MongoDB</td><td></td></tr>
+            
+            <tr class="tr-project"> 
+              <td><h5>Exercise Tracker</h5></td>
+              <td><h5><a href="https://replit.com/@junonurakbar/boilerplate-project-exercisetracker" target="_blank">View <i class="bi bi-arrow-up-right-square-fill"></i></a></h5></td>
+            </tr>
+            <tr class="tr-extend"><td><b>Programs: </b> NodeJS, ExpressJS, MongoDB</td><td></td></tr>
+            
+            <tr class="tr-project">
+              <td><h5>File Metadata Microservice</h5></td>
+              <td><h5><a href="https://replit.com/@junonurakbar/boilerplate-project-filemetadata" target="_blank">View <i class="bi bi-arrow-up-right-square-fill"></i></a></h5></td>
+            </tr>
+            <tr class="tr-extend"><td><b>Programs: </b> NodeJS, ExpressJS, MongoDB</td><td></td></tr>
+
+            <tr class="tr-project">
+              <td><h5>Worldcup Database</h5></td>
+              <td><h5><a href="https://github.com/junonurakbar/World-Cup-Database" target="_blank">View <i class="bi bi-arrow-up-right-square-fill"></i></a></h5></td>
+            </tr>
+            <tr class="tr-extend"><td><b>Programs: </b>Shell, PostgreSQL</td><td></td></tr>
+
+            <tr class="tr-project">
+              <td><h5>Salon Appointment Scheduler Database</h5></td>
+              <td><h5><a href="https://github.com/junonurakbar/build-a-salon-appointment-scheduler/" target="_blank">View <i class="bi bi-arrow-up-right-square-fill"></i></a></h5></td>
+            </tr>
+            <tr class="tr-extend"><td><b>Programs: </b>Shell, PostgreSQL</td><td></td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <section id="contact">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col">
+            <!-- <h2>Contact Me</h2> -->
+          </div>
+        </div>
+
+        <!-- <div class="row justify-content-center">
+          <div class="col-md-6">
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Full Name:</label>
+                <input type="text" class="form-control" id="name" />
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" />
+              </div>
+
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="3"></textarea>
+              </div>
+
+              <button type="send" class="btn btn-primary">Send</button>
+            </form>
+          </div>
+        </div>
+      </div> -->
+    </section>
+
+    <!-- footer -->
+    <footer class="text-center mt-3 pt-3 pb-3 align-content-center footer">
+      <p><h5><i class="bi bi-bootstrap-fill"></i> Created with Bootstrap</h5></p>
+    </footer>
+    
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous">
+    </script>
+  </body>
+</html>

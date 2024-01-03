@@ -1,0 +1,93 @@
+html {
+  position: relative;
+}
+
+.navbar.navbar-expand-lg {
+  background-color: saddlebrown;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.card-body {
+  padding-top: 0;
+}
+
+.card {
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding-top: 4rem;
+}
+
+.jumbotron {
+  padding-top: 5rem;
+  background-color: #eeffd8e3;
+}
+
+.jumbotron a {
+  text-decoration: none;
+}
+
+.about-me {
+  text-align: justify;
+}
+
+.about-me img.bi {
+  width: 10%;
+  height: 10%;
+}
+
+#about {
+  background-color: #eeffd8e3;
+}
+
+.card img {
+  height: 300px;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  background-color: saddlebrown;
+  font-weight: bold;
+  align-content: center;
+  justify-content: center;
+  color: azure;
+}
+
+#contact a {
+  text-decoration: none;
+}
+
+.container.other-projects {
+  width: 70%;
+}
+
+/* .container.other-projects table {
+  background-color: rgba(243, 190, 159, 0.747);
+} */
+
+.container.other-projects a {
+  text-decoration: none;
+  color:rgb(29, 28, 28);
+}
+
+/* table tr:nth-child(n):hover,
+table tr:nth-child(n):hover + tr {
+  background-color: #ad9090;
+} */
+
+/* #contact {
+  display: none;
+} */
