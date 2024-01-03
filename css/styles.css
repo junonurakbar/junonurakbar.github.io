@@ -23,7 +23,6 @@ section {
 
 .jumbotron {
   padding-top: 5rem;
-  background-color: #eeffd8e3;
 }
 
 .jumbotron a {
@@ -37,10 +36,6 @@ section {
 .about-me img.bi {
   width: 10%;
   height: 10%;
-}
-
-#about {
-  background-color: #eeffd8e3;
 }
 
 .card img {
