@@ -2,17 +2,11 @@ html {
   position: relative;
 }
 
-.navbar.navbar-expand-lg {
-  background-color: saddlebrown;
-}
-
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
-
 
 .card-body {
   padding-top: 0;
@@ -59,7 +53,6 @@ section {
 
 footer {
   display: flex;
-  background-color: saddlebrown;
   font-weight: bold;
   align-content: center;
   justify-content: center;
