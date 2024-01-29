@@ -1,33 +1,43 @@
 const searchButton = document.querySelector('#search-button');
 const input = document.querySelector('.input-keyword')
 const loading = document.querySelector('.loading')
+const alertDanger = document.querySelector('.container.failedFetch')
+const countryContainer = document.querySelector('.country-container');
 
 // ketika search diklik
 searchButton.addEventListener('click', async function(){
-    loading.innerHTML = showLoading()
     try {
+        loading.innerHTML = showLoading()
         const inputKeyWord = document.querySelector('.input-keyword');
         const countries = await getCountries(inputKeyWord.value);  // fetch API countries
         updateUI(countries);
         loading.innerHTML = ''
+        alertDanger.innerHTML = ``
     }
     catch(error) {
-        alert(error)
+        // alert(error)
+        countryContainer.innerHTML = '';
+        loading.innerHTML = ''
+        alertDanger.innerHTML = showFailed()
     }
 });
 
 // search ketika input ditekan tombol enter
 input.addEventListener('keyup', async function (event) {
     if (event.key == "Enter" && input.value != "") {
-        loading.innerHTML = showLoading()
         try {
+            loading.innerHTML = showLoading()
             const inputKeyWord = document.querySelector('.input-keyword');
             const countries = await getCountries(inputKeyWord.value);  // fetch API countries
             updateUI(countries) 
             loading.innerHTML = ''
+            alertDanger.innerHTML = ``
         }
         catch (e) {
-            alert (e)
+            // alert (e)
+            countryContainer.innerHTML = '';
+            loading.innerHTML = ''
+            alertDanger.innerHTML = showFailed()
         }
     }
 })
@@ -109,9 +119,10 @@ function showCards (country){
 function showDetail (result) {
     const currency = result[0].currencies;
     const currencyName = Object.keys(result[0].currencies);
-    // console.log(currency);
-    // console.log(currencyName);
-    // console.log(result[0])
+    const currVal = Object.values(result[0].currencies);
+    const currDisplay = currVal.map((c, index) => ` ${currencyName[index]} ${c.name}`)
+    // console.log(currDisplay)
+
     return `<div class="container-fluid">
         <div class="row">
             <div class="col-md-3">
@@ -126,7 +137,7 @@ function showDetail (result) {
                     <li class="list-group-item"><strong>Area: ${result[0].area.toLocaleString()} km\u00B2</strong></li>
                     <li class="list-group-item"><strong>Population: ${result[0].population.toLocaleString()}</strong></li>
                     <li class="list-group-item"><strong>Languages: ${Object.values(result[0].languages)}</strong></li>
-                    <li class="list-group-item"><strong>Currencies: ${currencyName}</strong></li>
+                    <li class="list-group-item"><strong>Currencies: ${currDisplay}</strong></li>
                     <li class="list-group-item"><strong>Time Zones: ${result[0].timezones}</strong></li>
                 </ul>
             </div>
@@ -138,5 +149,11 @@ function showLoading() {
     return `<div class="d-flex align-items-center">
         <strong role="status">Loading...</strong>
         <div class="spinner-border ms-auto"></div>
+    </div>`
+}
+
+function showFailed() {
+    return `<div class="alert alert-danger" role="alert">
+        <strong>Failed to fetch data,</strong> Please try to search again or check your connection.
     </div>`
 }
