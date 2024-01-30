@@ -154,6 +154,6 @@ function showLoading() {
 
 function showFailed() {
     return `<div class="alert alert-danger" role="alert">
-        <strong>Failed to fetch data,</strong> Please try to search again or check your connection.
+        <strong>Failed to fetch data,</strong> Please try to search another country name or check your connection.
     </div>`
 }
