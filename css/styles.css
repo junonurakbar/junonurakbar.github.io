@@ -71,6 +71,10 @@ footer {
   color:rgb(29, 28, 28);
 }
 
+table {
+  width: 100%;
+}
+
 /* table tr:nth-child(n):hover,
 table tr:nth-child(n):hover + tr {
   background-color: #ad9090;
