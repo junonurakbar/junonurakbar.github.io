@@ -1,0 +1,14 @@
+{
+  "name": "web-kantor",
+  "version": "1.0.0",
+  "description": "Web Percobaan PT Epsimac Rekayasa",
+  "main": "main.js",
+  "scripts": {
+    "test": "run dev"
+  },
+  "author": "Harjuno Nur Akbar",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.3.4"
+  }
+}

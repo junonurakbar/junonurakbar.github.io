@@ -1,0 +1,115 @@
+* {
+    font-family: montserrat;
+}
+
+body {
+    background: f1fbff;
+}
+
+.section-padding{
+    padding: 100px 0;
+}
+
+.carousel-item{
+    height: 85vh;
+    min-height: 300px;
+}
+
+.carousel-caption{
+    bottom: 220px;
+    z-index: 2;
+    align-content: center;
+}
+
+.carousel-caption h5{
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.carousel-caption p{
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.carousel-inner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;  
+}
+
+#services li {
+    list-style: none;
+}
+
+#about {
+    background: no-repeat url('src/img/unsplash-solar-panel-mariana-proenca.jpg');
+    background-size: cover;
+    background-position: 25% 25%;
+}
+
+#about, .mask {
+    height: 400px;
+}
+
+#about h1, #about h4 {
+    color: beige;
+}
+
+footer {
+    background-color: #2A3132;
+    padding: 0;
+    margin: 0;
+    color: blanchedalmond;
+    min-height: 42vh;
+}
+
+footer img {
+    width: 30%;
+    height: 30%;
+}
+
+#projects {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+#project-portofolio {
+    background-color: #2A3132;
+}
+
+#project-portofolio h2 {
+    padding: 0;
+    margin: 0 0 0 5.5rem;
+    color: beige;
+}
+
+.mask {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#reach {
+    width: 40%;
+    margin-top: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+    #reach {
+      width: 80%;
+    }
+}
+
+section.form {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 40%);
+    clip-path: polygon(0 0,calc(100% - 94.34px) 0,calc(100% - 30px) 30px,100% 94.34px,100% 100%,0 100%);
+    color: antiquewhite;
+}
