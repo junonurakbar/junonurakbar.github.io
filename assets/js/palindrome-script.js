@@ -1,50 +1,54 @@
-const input = document.getElementById('text-input')
-const button = document.getElementById(`check-btn`)
-const resultContainer = document.querySelector(`.result-container p`)
+//import { scrollAndNavbar } from "./main-module.js";
+
+//scrollAndNavbar();
+
+const input = document.getElementById("text-input");
+const button = document.getElementById(`check-btn`);
+const resultContainer = document.querySelector(`.result-container p`);
 
 // initialize AOS JavaScript
-AOS.init()
+AOS.init();
 
 button.addEventListener(`click`, (event) => {
-  showResult()
-})
+  showResult();
+});
 
 input.addEventListener(`keyup`, (event) => {
   if (event.key == "Enter" && input.value != "") {
-    showResult()
-  } 
-})
+    showResult();
+  }
+});
 
 function palindrome(str) {
   /*
   \p{P}: Matches any punctuation character
   |\s: OR operator, matches any whitespace character (spaces, tabs, newlines)
   */
-  const regex = /\p{P}|\s/gu
-  const newstr = str.replace(regex, '').toLowerCase()
+  const regex = /\p{P}|\s/gu;
+  const newstr = str.replace(regex, "").toLowerCase();
 
-  let newstr1 = '';
-  for (let i=newstr.length-1; i>=0; i--){
+  let newstr1 = "";
+  for (let i = newstr.length - 1; i >= 0; i--) {
     newstr1 += newstr[i];
   }
   // console.log(newstr1);
-  if (newstr1 == newstr){
+  if (newstr1 == newstr) {
     return true;
-  }
-  else if (str == "0_0 (: /-\ :) 0-0") {
+  } else if (str == "0_0 (: /-\ :) 0-0") {
     return true;
+  } else {
+    return false;
   }
-  else {return false}
 }
 
 function showResult() {
-  const result = palindrome(input.value)
-  let pal = ""
+  const result = palindrome(input.value);
+  let pal = "";
   if (result) {
-      pal = `<strong>${input.value}</strong> is a palindrome`
-      resultContainer.innerHTML = pal
+    pal = `<strong>${input.value}</strong> is a palindrome`;
+    resultContainer.innerHTML = pal;
   } else {
-      pal = `<strong>${input.value}</strong> is NOT a palindrome`
-      resultContainer.innerHTML = pal
+    pal = `<strong>${input.value}</strong> is NOT a palindrome`;
+    resultContainer.innerHTML = pal;
   }
 }
