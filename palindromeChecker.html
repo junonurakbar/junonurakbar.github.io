@@ -40,7 +40,7 @@
     <link href="assets/css/palindrome-styles.css" rel="stylesheet" />
   </head>
 
-  <body class="index-page">
+  <body class="index-page dark-background">
     <header id="header" class="header d-flex align-items-center sticky-top">
       <div
         class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
@@ -56,10 +56,12 @@
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="./index.html#hero" class="active">Home</a></li>
+            <li><a href="./index.html#hero">Home</a></li>
             <li><a href="./index.html#about">About</a></li>
             <li><a href="./index.html#resume">Resume</a></li>
-            <li><a href="./index.html#portfolio">Portfolio</a></li>
+            <li>
+              <a href="./index.html#portfolio" class="active">Portfolio</a>
+            </li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -81,8 +83,8 @@
       </div>
     </header>
 
-    <div class="container mt-3" data-aos="zoom-in" data-aos-delay="100">
-      <div class="card pb-3">
+    <div class="palindrome-container" data-aos="zoom-in" data-aos-delay="100">
+      <div class="container card pb-3">
         <h1 class="title">Palindrome Check</h1>
         <label for="text-input" class="form-label"
           >Enter in text to check for a palindrome</label
@@ -104,6 +106,32 @@
         </div>
       </div>
     </div>
+    
+  <footer id="footer" class="footer">
+    <div class="container">
+        <div class="copyright text-center">
+            <p>
+                <span>This project was forked from <a href="//bootstrapmade.com/easyfolio-bootstrap-portfolio-template/
+"><strong class="sitename">EasyFolio</strong></a>.</span>
+              <span>All Rights Reserved</span>
+            </p>
+        </div>
+        <div class="social-links d-flex justify-content-center">
+            <a href="https://github.com/junonurakbar" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/harjuno-nur-akbar-8b16541a4/" target="_blank""><i class="bi bi-linkedin"></i></a>
+            <a href="mailto:junonakb@gmail.com" target="_blank"><i class="bi bi-envelope-at-fill"></i></a>
+        </div>
+        <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you've purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+            Designed by
+            <a href="https://bootstrapmade.com/">BootstrapMade</a> |
+            <a href="https://bootstrapmade.com/tools/">DevTools</a>
+        </div>
+    </div>
+  </footer>
 
     <!-- Bootstrap -->
     <script

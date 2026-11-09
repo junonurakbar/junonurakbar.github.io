@@ -46,20 +46,20 @@
   --surface-color: #ffffff;
 }
 
-.dark-background {
+/* .dark-background {
   --background-color: #060606;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #252525;
   --contrast-color: #ffffff;
-}
+} */
 
-.tokyo-night-background {
-  --nav-color: #07aa2f7; /* The default color of the main navmenu links */
+.dark-background {
+  --nav-color: #c0caf5; /* The default color of the main navmenu links */
   --nav-hover-color: #e87532; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #0a0f14; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-mobile-background-color: #292e42; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #292e42; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #c0caf5; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #e87532; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 
   --background-color: #16161e;
