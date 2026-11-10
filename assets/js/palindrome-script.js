@@ -47,7 +47,7 @@ function showResult() {
   const result = palindrome(input.value);
   let pal = "";
   if (result === null) {
-    resultContainer.innerHTML = `please enter the input`;
+    resultContainer.innerHTML = ``;
   } else if (result) {
     pal = `<strong>${input.value}</strong> is a palindrome`;
     resultContainer.innerHTML = pal;
