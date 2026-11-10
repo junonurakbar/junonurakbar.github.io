@@ -1,3 +1,140 @@
 html {
-    position: relative;
+  position: relative;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the body takes full height */
+}
+
+.card,
+.modal-content,
+.col-md li {
+  background-color: var(--card-background-color);
+}
+
+.col-md li {
+  border: 0;
+  color: var(--default-color);
+}
+
+p,
+label,
+.country-container,
+.card-title,
+.card-subtitle,
+h5,
+.card-body h6 {
+  color: var(--default-color);
+}
+
+.form-control,
+.form-control:focus {
+  background-color: var(--text-input-color);
+}
+
+.btn.btn-primary {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--contrast-color);
+  background: transparent;
+}
+
+.btn.btn-primary:hover,
+.btn.btn-secondary:hover,
+.close-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.close-btn {
+  background-color: #6c757d;
+  color: #f5f5f6;
+  border-radius: 4px;
+  padding: 0 0.5rem 0 0.5rem;
+  font-size: 0.9rem;
+}
+
+.modal-header,
+.modal-footer {
+  border: 0;
+}
+
+.card {
+  padding: 0;
+}
+
+.footer {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-size: 14px;
+  padding: 40px 0;
+  position: relative;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  margin-top: auto;
+}
+
+.footer .copyright p {
+  margin-bottom: 0;
+}
+
+.footer .social-links {
+  margin-top: 20px;
+}
+
+.footer .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  font-size: 16px;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  margin: 0 5px;
+  transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.footer .credits {
+  margin-top: 10px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.scroll-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: -15px;
+  z-index: 99999;
+  background-color: var(--accent-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.scroll-top i {
+  font-size: 24px;
+  color: var(--contrast-color);
+  line-height: 0;
+}
+
+.scroll-top:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color);
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 15px;
 }

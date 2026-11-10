@@ -1,5 +1,5 @@
 const searchButton = document.querySelector("#search-button");
-const input = document.querySelector(".input-keyword");
+const input = document.querySelector(".form-control");
 const loading = document.querySelector(".loading");
 const alertDanger = document.querySelector(".container.failedFetch");
 const countryContainer = document.querySelector(".country-container");
@@ -8,7 +8,7 @@ const countryContainer = document.querySelector(".country-container");
 searchButton.addEventListener("click", async function () {
   try {
     loading.innerHTML = showLoading();
-    const inputKeyWord = document.querySelector(".input-keyword");
+    const inputKeyWord = document.querySelector(".form-control");
     const countries = await getCountries(inputKeyWord.value); // fetch API countries
     updateUI(countries);
     loading.innerHTML = "";
@@ -26,7 +26,7 @@ input.addEventListener("keyup", async function (event) {
   if (event.key == "Enter" && input.value != "") {
     try {
       loading.innerHTML = showLoading();
-      const inputKeyWord = document.querySelector(".input-keyword");
+      const inputKeyWord = document.querySelector(".form-control");
       const countries = await getCountries(inputKeyWord.value); // fetch API countries
       updateUI(countries);
       loading.innerHTML = "";
@@ -47,7 +47,7 @@ async function getCountries(keyword) {
       "&pretty=1",
     {
       headers: {
-        Authorization: "Bearer rc_live_自分のAPIキーを使ってください",
+        Authorization: "Bearer rc_live_insert_your_own_API_key_here",
       },
     },
   )
@@ -78,7 +78,7 @@ async function getCountryDetail(ccn3) {
     "https://api.restcountries.com/countries/v5/names.common/" + ccn3,
     {
       headers: {
-        Authorization: "Bearer rc_live_自分のAPIキーを使ってください",
+        Authorization: "Bearer rc_live_insert_your_own_API_key_here",
       },
     },
   )
@@ -127,13 +127,12 @@ function updateUIdetail(result) {
 
 function showCards(country) {
   //console.log(country);
-  const capitals = country.capitals.map((city) => ` ${city.name}`);
-  return `<div class="col-md-4 my-5">
+  return `<div class="col-md-4 my-5" data-aos="fade-up">
             <div class="card">
                 <img src="${country.flag.url_png}" class="card-img-top" alt="" height=180px>
                     <div class="card-body">
                         <h5 class="card-title">${country.names.common}</h5>
-                        <h6 class="card-subtitle mb-2 text-body-secondary">Capital: ${capitals}</h6>
+                        <h6 class="card-subtitle mb-2">Capital: ${country.capitals.map((city) => ` ${city.name}`)}</h6>
                         <a href="#" class="btn btn-primary modal-detail-button" data-bs-toggle="modal" data-bs-target="#countryDetailModal" data-ccn3="${country.names.common}">Show Details</a> 
                     </div>
                 </div>
@@ -142,7 +141,7 @@ function showCards(country) {
 }
 
 function showDetail(result) {
-  console.log(result[0]);
+  //console.log(result[0]);
   //const currency = result[0].currencies;
   //const currencyName = Object.keys(result[0].currencies);
   //const currVal = Object.values(result[0].currencies);
@@ -158,15 +157,15 @@ function showDetail(result) {
             </div>-->
             <div class="col-md">
                 <ul class="list-group">
-                    <li class="list-group-item"><h4>Country Name: ${result[0].names.common}</h4></li>
-                    <li class="list-group-item"><strong>Continent: ${result[0].region}</strong></li>
-                    <li class="list-group-item"><strong>Sub-Continent: ${result[0].subregion}</strong></li>
-                    <li class="list-group-item"><strong>Capital: ${capitals}</strong></li>
-                    <li class="list-group-item"><strong>Area: ${areas}</strong></li>
-                    <li class="list-group-item"><strong>Population: ${result[0].population.toLocaleString()}</strong></li>
-                    <li class="list-group-item"><strong>Languages: ${languages}</strong></li>
-                    <li class="list-group-item"><strong>Currencies: ${currDisplay}</strong></li>
-                    <li class="list-group-item"><strong>Time Zones: ${result[0].timezones.map((t) => ` ${t}`)}</strong></li>
+                    <li class="list-group-item"><h4>Name: ${result[0].names.common}</h4></li>
+                    <li class="list-group-item"><p>Continent: ${result[0].region}</p></li>
+                    <li class="list-group-item"><p>Sub-Continent: ${result[0].subregion}</p></li>
+                    <li class="list-group-item"><p>Capital: ${capitals}</p></li>
+                    <li class="list-group-item"><p>Area: ${areas}</p></li>
+                    <li class="list-group-item"><p>Population: ${result[0].population.toLocaleString()}</p></li>
+                    <li class="list-group-item"><p>Languages: ${languages}</p></li>
+                    <li class="list-group-item"><p>Currencies: ${currDisplay}</p></li>
+                    <li class="list-group-item"><p>Time Zones: ${result[0].timezones.map((t) => ` ${t}`)}</p></li>
                 </ul>
             </div>
         </div>

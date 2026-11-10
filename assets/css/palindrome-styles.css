@@ -23,7 +23,7 @@ body {
 }
 
 .card {
-  background-color: #292e42;
+  background-color: var(--card-background-color);
 }
 
 p,
@@ -32,7 +32,7 @@ label {
 }
 
 #text-input {
-  background-color: #b8c2eb;
+  background-color: var(--text-input-color);
 }
 
 .container.input,
